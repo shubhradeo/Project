@@ -1,0 +1,1913 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-
+scale=1.0">
+ <title>LifeOS — Dashboard</title>
+ <!-- Bootstrap 5.3.3 CSS -->
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/
+bootstrap.min.css" rel="stylesheet" integrity="sha384-
+QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+crossorigin="anonymous">
+ <style>
+    body {
+        background-color: #f2f2f2;
+        color: #2b2b2b;
+        font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    }
+    .top-nav {
+        background-color: #ffffff;
+        border-bottom: 1px solid #e0e0e0;
+    }
+    .main-card {
+        background-color: #ffffff;
+        border: 1px solid #e5e5e5;
+        border-radius: 8px;
+    }
+    .side-card {
+        background-color: #e2e2e2;
+        border: none;
+        border-radius: 8px;
+    }
+    .btn-charcoal {
+        background-color: #212529;
+        color: #ffffff;
+        border: none;
+        border-radius: 6px;
+        padding: 8px 18px;
+        font-weight: 500;
+    }
+    .btn-charcoal:hover {
+        background-color: #343a40;
+        color: #ffffff;
+    }
+ </style>
+</head>
+<body>
+
+
+ <!-- Minimalist Top Navigation -->
+ <nav class="navbar navbar-expand-lg top-nav py-2">
+    <div class="container">
+        <a class="navbar-brand fw-semibold text-dark"
+href="dashboard.html">LifeOS</a>
+        <button class="navbar-toggler" type="button" data-bs-
+toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto gap-2">
+            <li class="nav-item">
+              <a class="nav-link active fw-semibold text-dark"
+href="dashboard.html">Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-secondary" href="notes.html">Quick
+Notes</a>
+            </li>
+          </ul>
+        </div>
+    </div>
+ </nav>
+
+
+ <!-- Main Container -->
+ <div class="container py-5">
+
+
+    <!-- Centered Page Header (Matches Reference) -->
+    <div class="text-center mb-5">
+        <h1 class="fw-semibold mb-2" style="font-size: 2.3rem;">Welcome
+to LifeOS Dashboard</h1>
+        <p class="text-muted">Organize your daily summary, track your
+overview, and capture quick notes.</p>
+    </div>
+
+
+    <!-- Section Title -->
+    <h3 class="fw-semibold mb-3">Daily Overview</h3>
+    <div class="row g-4">
+     <!-- Left Column: White Card (Overview & Daily Summary) -->
+     <div class="col-12 col-lg-8">
+        <div class="main-card p-4 h-100">
+          <h4 class="fw-semibold mb-1">Today's Daily Summary</h4>
+          <p class="text-muted small mb-4">Complete your daily
+priorities and review your progress.</p>
+
+
+          <!-- Checklist -->
+          <div id="summaryList" class="d-flex flex-column gap-3 mb-4">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox"
+id="item1">
+                <label class="form-check-label" for="item1">Review
+morning goals and schedule</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox"
+id="item2">
+                <label class="form-check-label" for="item2">Complete
+LifeOS Dashboard &amp; Quick Notes pages</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox"
+id="item3">
+                <label class="form-check-label" for="item3">Study core
+subjects for two hours</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox"
+id="item4">
+                <label class="form-check-label" for="item4">Plan tasks
+for tomorrow</label>
+              </div>
+          </div>
+
+
+          <!-- Input & Dark Charcoal Button (Matches Reference) -->
+          <div class="mb-3">
+              <input type="text" class="form-control py-2"
+id="newSummaryInput" placeholder="Enter a new daily priority">
+          </div>
+          <button type="button" class="btn btn-charcoal"
+onclick="addSummaryItem()">Add Priority</button>
+          </div>
+      </div>
+
+
+      <!-- Right Column: Stacked Gray Cards (Overview Metrics & Quick
+Note Jump) -->
+      <div class="col-12 col-lg-4">
+          <div class="d-flex flex-column gap-3">
+           <div class="side-card p-4">
+             <h5 class="fw-semibold mb-1">Tasks Completed</h5>
+             <p class="text-muted small mb-0" id="statusText">0 of 4
+priorities completed today.</p>
+           </div>
+
+
+           <div class="side-card p-4">
+             <h5 class="fw-semibold mb-1">Stay Focused</h5>
+             <p class="text-muted small mb-0">Complete your key work on
+time and keep momentum steady.</p>
+           </div>
+
+
+           <div class="side-card p-4">
+             <h5 class="fw-semibold mb-1">Quick Notes Ready</h5>
+             <p class="text-muted small mb-3">Have an idea or study
+point to save for later?</p>
+             <a href="notes.html" class="btn btn-charcoal btn-sm">Open
+Quick Notes</a>
+           </div>
+          </div>
+      </div>
+    </div>
+
+
+ </div>
+
+
+ <!-- Bootstrap 5.3.3 JS Bundle -->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/
+bootstrap.bundle.min.js" integrity="sha384-
+YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+crossorigin="anonymous"></script>
+
+
+ <script>
+    function updateStatus() {
+      const checkboxes = document.querySelectorAll('#summaryList
+input[type="checkbox"]');
+        const checked = document.querySelectorAll('#summaryList
+input[type="checkbox"]:checked');
+        document.getElementById('statusText').textContent =
+             ${checked.length} of ${checkboxes.length} priorities completed
+today.;
+    }
+
+
+    document.getElementById('summaryList').addEventListener('change',
+updateStatus);
+
+
+    function addSummaryItem() {
+        const input = document.getElementById('newSummaryInput');
+        const text = input.value.trim();
+        if (!text) return;
+
+
+        const id = 'item_' + Date.now();
+        const div = document.createElement('div');
+        div.className = 'form-check';
+        div.innerHTML = `
+             <input class="form-check-input" type="checkbox" id="${id}">
+             <label class="form-check-label" for="${id}">${text}</label>
+        `;
+        document.getElementById('summaryList').appendChild(div);
+        input.value = '';
+        updateStatus();
+    }
+ </script>
+</body>
+</html>
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-
+scale=1.0">
+ <title>LifeOS — Quick Notes</title>
+ <!-- Bootstrap 5.3.3 CSS -->
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/
+bootstrap.min.css" rel="stylesheet" integrity="sha384-
+QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+crossorigin="anonymous">
+ <style>
+    body {
+        background-color: #f2f2f2;
+        color: #2b2b2b;
+        font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    }
+    .top-nav {
+        background-color: #ffffff;
+        border-bottom: 1px solid #e0e0e0;
+    }
+    .main-card {
+        background-color: #ffffff;
+        border: 1px solid #e5e5e5;
+        border-radius: 8px;
+    }
+    .side-card {
+        background-color: #e2e2e2;
+        border: none;
+        border-radius: 8px;
+    }
+    .btn-charcoal {
+        background-color: #212529;
+        color: #ffffff;
+        border: none;
+        border-radius: 6px;
+        padding: 8px 18px;
+        font-weight: 500;
+    }
+    .btn-charcoal:hover {
+        background-color: #343a40;
+        color: #ffffff;
+    }
+ </style>
+</head>
+<body>
+
+
+ <!-- Minimalist Top Navigation -->
+ <nav class="navbar navbar-expand-lg top-nav py-2">
+    <div class="container">
+        <a class="navbar-brand fw-semibold text-dark"
+href="dashboard.html">LifeOS</a>
+        <button class="navbar-toggler" type="button" data-bs-
+toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto gap-2">
+           <li class="nav-item">
+             <a class="nav-link text-secondary"
+href="dashboard.html">Dashboard</a>
+           </li>
+           <li class="nav-item">
+             <a class="nav-link active fw-semibold text-dark"
+href="notes.html">Quick Notes</a>
+           </li>
+          </ul>
+      </div>
+    </div>
+ </nav>
+
+
+ <!-- Main Container -->
+ <div class="container py-5">
+
+
+    <!-- Centered Page Header (Matches Reference) -->
+    <div class="text-center mb-5">
+      <h1 class="fw-semibold mb-2" style="font-size: 2.3rem;">Quick
+Notes</h1>
+      <p class="text-muted">Write down your thoughts, study notes, and
+daily reminders.</p>
+    </div>
+
+
+    <!-- Section Title -->
+    <h3 class="fw-semibold mb-3">My Notes</h3>
+
+
+    <div class="row g-4">
+      <!-- Left Column: White Card (Write a Note) -->
+      <div class="col-12 col-lg-7">
+          <div class="main-card p-4">
+           <h4 class="fw-semibold mb-1">Create a Quick Note</h4>
+           <p class="text-muted small mb-4">Keep your ideas organized
+and accessible anytime.</p>
+
+
+           <form id="noteForm" onsubmit="addNote(event)">
+             <div class="mb-3">
+                  <input type="text" class="form-control py-2"
+id="noteTitle" placeholder="Enter note title" required>
+             </div>
+             <div class="mb-3">
+                    <textarea class="form-control" id="noteContent" rows="5"
+placeholder="Write your note details here..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-charcoal">Add Note</
+button>
+            </form>
+           </div>
+      </div>
+
+
+      <!-- Right Column: Stacked Gray Cards (Saved Notes) -->
+      <div class="col-12 col-lg-5">
+           <div class="d-flex flex-column gap-3" id="notesList">
+            <!-- Saved notes render here -->
+           </div>
+      </div>
+    </div>
+
+
+ </div>
+
+
+ <!-- Bootstrap 5.3.3 JS Bundle -->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/
+bootstrap.bundle.min.js" integrity="sha384-
+YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+crossorigin="anonymous"></script>
+
+
+ <script>
+    const initialNotes = [
+      {
+           id: 1,
+           title: 'Stay Organized',
+           content: 'Review project milestones before the evening team
+sync.'
+      },
+      {
+           id: 2,
+           title: 'Study Reminder',
+           content: 'Revise key formulas and practice sample problems.'
+      },
+      {
+           id: 3,
+           title: 'Take Rest',
+           content: 'Give yourself a short break after completing your
+study session.'
+        }
+    ];
+
+
+    function getNotes() {
+        const saved = localStorage.getItem('lifeos_clean_notes');
+        if (!saved) {
+             localStorage.setItem('lifeos_clean_notes',
+JSON.stringify(initialNotes));
+             return initialNotes;
+         }
+        return JSON.parse(saved);
+    }
+
+
+    function renderNotes() {
+        const container = document.getElementById('notesList');
+        const notes = getNotes();
+
+
+        if (notes.length === 0) {
+             container.innerHTML = `
+               <div class="side-card p-4">
+                 <h5 class="fw-semibold mb-1">No Notes Yet</h5>
+                 <p class="text-muted small mb-0">Use the form on the left
+to add your first note.</p>
+               </div>`;
+             return;
+         }
+
+
+        container.innerHTML = notes.map(note => `
+             <div class="side-card p-4">
+               <div class="d-flex justify-content-between align-items-start
+mb-1">
+                 <h5 class="fw-semibold mb-0">${note.title}</h5>
+                 <button type="button" class="btn-close small" aria-
+label="Delete" onclick="deleteNote(${note.id})"></button>
+               </div>
+               <p class="text-muted small mb-0">${note.content}</p>
+             </div>
+        `).join('');
+    }
+
+
+    function addNote(event) {
+        event.preventDefault();
+        const title = document.getElementById('noteTitle').value.trim();
+          const content =
+document.getElementById('noteContent').value.trim();
+
+
+          const notes = getNotes();
+          notes.unshift({ id: Date.now(), title, content });
+          localStorage.setItem('lifeos_clean_notes',
+JSON.stringify(notes));
+
+
+          document.getElementById('noteForm').reset();
+          renderNotes();
+      }
+
+
+      function deleteNote(id) {
+          const notes = getNotes().filter(n => n.id !== id);
+          localStorage.setItem('lifeos_clean_notes',
+JSON.stringify(notes));
+          renderNotes();
+      }
+
+
+      renderNotes();
+    </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LifeOS - Animated Calendar</title>
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/
+bootstrap.min.css" rel="stylesheet">
+
+
+<style>
+
+
+body {
+      margin: 0;
+      font-family: 'Poppins', Arial, sans-serif;
+      background: linear-gradient(135deg, #e8eaff, #f8f9ff, #e4f0ff);
+      min-height: 100vh;
+      overflow-x: hidden;
+}
+/* Background animation */
+
+
+body::before, body::after {
+    content: "";
+    position: fixed;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    filter: blur(70px);
+    opacity: 0.5;
+    z-index: -1;
+    animation: float 7s infinite alternate ease-in-out;
+}
+
+
+body::before {
+    background: #8b7cff;
+    top: 5%;
+    left: -80px;
+}
+
+
+body::after {
+    background: #65c8ff;
+    bottom: 5%;
+    right: -80px;
+    animation-delay: 2s;
+}
+
+
+@keyframes float {
+    from { transform: translateY(0); }
+    to { transform: translateY(70px); }
+}
+
+
+/* Main heading */
+
+
+.main-title {
+    color: #5548d9;
+    font-weight: bold;
+    animation: slideDown 1s ease;
+}
+
+
+.subtitle {
+    color: #777;
+    animation: fadeIn 1.5s ease;
+}
+
+
+@keyframes slideDown {
+    from {
+           opacity: 0;
+           transform: translateY(-40px);
+    }
+    to {
+           opacity: 1;
+           transform: translateY(0);
+    }
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+/* Calendar container */
+
+
+.calendar-box {
+    background: rgba(255,255,255,0.9);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 35px rgba(70,70,150,0.12);
+    animation: zoomIn 0.9s ease;
+    transition: 0.4s;
+}
+
+
+.calendar-box:hover {
+    box-shadow: 0 15px 40px rgba(90,80,200,0.2);
+}
+
+
+@keyframes zoomIn {
+    from {
+           opacity: 0;
+           transform: scale(0.9);
+    }
+    to {
+           opacity: 1;
+           transform: scale(1);
+    }
+}
+
+
+/* Calendar grid */
+
+
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 9px;
+}
+
+
+.day-name {
+    background: linear-gradient(135deg, #6255df, #9285ff);
+    color: white;
+    text-align: center;
+    padding: 12px 3px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+
+/* Date cells */
+
+
+.date {
+    min-height: 110px;
+    background: #f8f9ff;
+    border: 1px solid #e5e5f5;
+    border-radius: 10px;
+    padding: 8px;
+    transition: all 0.3s ease;
+    animation: appear 0.7s ease both;
+}
+
+
+@keyframes appear {
+    from {
+           opacity: 0;
+           transform: translateY(20px);
+    }
+    to {
+           opacity: 1;
+           transform: translateY(0);
+    }
+}
+
+
+.date:hover {
+    background: #eeedff;
+    transform: translateY(-7px) scale(1.03);
+    border-color: #7568ee;
+    box-shadow: 0 8px 18px rgba(90,80,200,0.16);
+    cursor: pointer;
+}
+
+
+/* Today's date */
+
+
+.today {
+    background: #e9e5ff;
+    border: 2px solid #6558e8;
+    animation: glow 2s infinite alternate;
+}
+
+
+@keyframes glow {
+    from {
+           box-shadow: 0 0 5px #aaa0ff;
+    }
+    to {
+           box-shadow: 0 0 18px #766aff;
+    }
+}
+
+
+/* Task labels */
+
+
+.task {
+    background: linear-gradient(135deg, #685be7, #9285ff);
+    color: white;
+    padding: 5px;
+    margin-top: 7px;
+    border-radius: 5px;
+    font-size: 11px;
+    transition: 0.3s;
+}
+
+
+.task:hover {
+    transform: translateX(5px);
+    background: #4336c4;
+}
+
+
+.task.green {
+    background: linear-gradient(135deg, #119b69, #42c99a);
+}
+
+
+.task.orange {
+    background: linear-gradient(135deg, #f08b30, #ffb45d);
+}
+
+
+/* Navigation buttons */
+
+
+.nav-btn {
+    background: linear-gradient(135deg, #6255df, #9588ff);
+    border: none;
+    color: white;
+    border-radius: 25px;
+    padding: 9px 20px;
+    transition: 0.3s;
+}
+
+
+.nav-btn:hover {
+    color: white;
+    transform: scale(1.08);
+    box-shadow: 0 5px 15px #aaa0ff;
+}
+
+
+/* Add task section */
+
+
+.add-task {
+    background: #f7f6ff;
+    padding: 20px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+
+.add-task:hover {
+    box-shadow: 0 5px 20px rgba(90,80,200,0.12);
+}
+
+
+.form-control, .form-select {
+    border-radius: 8px;
+    padding: 11px;
+    transition: 0.3s;
+}
+
+
+.form-control:focus, .form-select:focus {
+    border-color: #7568ee;
+    box-shadow: 0 0 10px #d1ccff;
+}
+
+
+.add-btn {
+    background: linear-gradient(135deg, #6255df, #9588ff);
+    color: white;
+    border: none;
+    padding: 11px 25px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+
+.add-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 7px 15px #aaa0ff;
+    color: white;
+}
+
+
+/* Responsive */
+
+
+@media(max-width: 600px) {
+    .calendar-box {
+        padding: 12px;
+    }
+
+
+    .calendar {
+        gap: 3px;
+    }
+
+
+    .date {
+        min-height: 75px;
+        padding: 4px;
+        font-size: 12px;
+    }
+
+
+    .day-name {
+        font-size: 10px;
+        padding: 8px 1px;
+    }
+
+
+    .task {
+        font-size: 8px;
+           padding: 3px;
+     }
+
+
+     .nav-btn {
+           padding: 7px 10px;
+           font-size: 12px;
+     }
+}
+
+
+@media(prefers-reduced-motion: reduce) {
+     *, *::before, *::after {
+           animation-duration: 0.01ms !important;
+           animation-iteration-count: 1 !important;
+           transition-duration: 0.01ms !important;
+     }
+}
+
+
+</style>
+</head>
+
+
+<body>
+
+
+<div class="container py-5">
+
+
+     <!-- Heading -->
+     <div class="text-center mb-4">
+           <h1 class="main-title">  ✨ LifeOS</h1>
+           <p class="subtitle">Your Life, Your Plans, Your Productivity</
+p>
+     </div>
+
+
+     <div class="calendar-box">
+
+
+           <!-- Month navigation -->
+           <div class="d-flex justify-content-between align-items-center
+mb-4">
+
+
+               <h3 class="text-primary fw-bold mb-0" align="center">
+                    November 2026
+               </h3>
+
+
+           </div>
+        <!-- Calendar -->
+        <div class="calendar">
+
+
+             <div class="day-name">Sun</div>
+             <div class="day-name">Mon</div>
+             <div class="day-name">Tue</div>
+             <div class="day-name">Wed</div>
+             <div class="day-name">Thu</div>
+             <div class="day-name">Fri</div>
+             <div class="day-name">Sat</div>
+
+
+             <!-- Week 1 -->
+             <div class="date">1</div>
+             <div class="date">2<div class="task">Study HTML</div></div>
+             <div class="date">3</div>
+             <div class="date">4<div class="task green">Exercise</div></
+div>
+             <div class="date">5</div>
+             <div class="date">6<div class="task orange">Project Work</
+div></div>
+             <div class="date">7</div>
+
+
+             <!-- Week 2 -->
+             <div class="date">8</div>
+             <div class="date">9<div class="task">Assignment</div></div>
+             <div class="date">10</div>
+             <div class="date">11<div class="task green">Reading</div></
+div>
+             <div class="date">12</div>
+             <div class="date">13</div>
+             <div class="date">14<div class="task orange">Revision</
+div></div>
+
+
+             <!-- Week 3 -->
+             <div class="date">15</div>
+             <div class="date">16</div>
+             <div class="date">17<div class="task">Study Java</div></
+div>
+             <div class="date">18</div>
+             <div class="date">19<div class="task green">Workout</div></
+div>
+             <div class="date">20</div>
+             <div class="date today">21<div class="task">Complete
+Project</div></div>
+
+
+             <!-- Week 4 -->
+             <div class="date">22</div>
+             <div class="date">23</div>
+             <div class="date">24<div class="task orange">Exam
+Preparation</div></div>
+             <div class="date">25</div>
+             <div class="date">26</div>
+             <div class="date">27<div class="task green">Exercise</
+div></div>
+             <div class="date">28</div>
+
+
+             <!-- Week 5 -->
+             <div class="date">29</div>
+             <div class="date">30<div class="task">Monthly Review</
+div></div>
+             <div class="date"></div>
+             <div class="date"></div>
+             <div class="date"></div>
+             <div class="date"></div>
+             <div class="date"></div>
+
+
+        </div>
+
+
+        <hr class="my-4">
+
+
+        <!-- Add Task -->
+        <div class="add-task">
+
+
+             <h4 class="text-primary mb-3">
+                 + Add New Task
+             </h4>
+
+
+             <form>
+
+
+                 <div class="row g-3">
+
+
+                      <div class="col-md-5">
+                          <label class="form-label">Task Name</label>
+                          <input type="text" class="form-control"
+                          placeholder="Enter your task">
+                        </div>
+
+
+                        <div class="col-md-4">
+                            <label class="form-label">Select Date</label>
+                            <input type="date" class="form-control">
+                        </div>
+
+
+                        <div class="col-md-3">
+                            <label class="form-label">Category</label>
+                            <select class="form-select">
+                                   <option>Study</option>
+                                   <option>Personal</option>
+                                   <option>Work</option>
+                                   <option>Health</option>
+                            </select>
+                        </div>
+
+
+                        <div class="col-12">
+                            <a href="add-task.html" class="add-btn text-
+decoration-none">
+                                   + Add Task
+                            </a>
+                        </div>
+
+
+                   </div>
+
+
+              </form>
+
+
+          </div>
+
+
+    </div>
+
+
+</div>
+
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-
+scale=1.0">
+    <title>LifeOS - Add Task</title>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/
+bootstrap.min.css" rel="stylesheet">
+
+
+    <style>
+        body {
+              background: linear-gradient(135deg, #e8eaff, #f8f9ff);
+              font-family: Arial, sans-serif;
+              min-height: 100vh;
+        }
+
+
+        .task-card {
+              max-width: 750px;
+              margin: 50px auto;
+              background: white;
+              padding: 35px;
+              border-radius: 20px;
+              box-shadow: 0 10px 35px rgba(70,70,150,0.15);
+              animation: fadeIn 0.8s ease;
+        }
+
+
+        @keyframes fadeIn {
+              from {
+                   opacity: 0;
+                   transform: translateY(30px);
+               }
+              to {
+                   opacity: 1;
+                   transform: translateY(0);
+               }
+        }
+
+
+        h2 {
+              color: #6255df;
+              font-weight: bold;
+        }
+
+
+        .form-control, .form-select {
+              padding: 12px;
+              border-radius: 9px;
+              transition: 0.3s;
+        }
+          .form-control:focus, .form-select:focus {
+              border-color: #7568ee;
+              box-shadow: 0 0 10px #d1ccff;
+          }
+
+
+          .submit-btn {
+              background: linear-gradient(135deg, #6255df, #9588ff);
+              color: white;
+              border: none;
+              padding: 12px 25px;
+              border-radius: 8px;
+              transition: 0.3s;
+          }
+
+
+          .submit-btn:hover {
+              transform: translateY(-4px);
+              box-shadow: 0 6px 15px #aaa0ff;
+              color: white;
+          }
+
+
+          .back-btn {
+              color: #6255df;
+              text-decoration: none;
+              font-weight: bold;
+          }
+
+
+          .back-btn:hover {
+              color: #3427a8;
+          }
+
+
+          .cancel-btn {
+              padding: 12px 25px;
+              border-radius: 8px;
+          }
+    </style>
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+    <div class="task-card">
+<a href="index.html" class="back-btn">
+   ← Back to Calendar
+</a>
+
+
+<div class="text-center mt-4 mb-4">
+   <h2>  ✨ Add New Task</h2>
+   <p class="text-muted">
+         Plan your day and stay productive!
+   </p>
+</div>
+
+
+<form action="#" method="post">
+
+
+   <!-- Task Name -->
+   <div class="mb-3">
+         <label class="form-label">Task Name</label>
+         <input type="text"
+                  class="form-control"
+                  name="task_name"
+                  placeholder="Enter task name"
+                  required>
+   </div>
+
+
+   <!-- Description -->
+   <div class="mb-3">
+         <label class="form-label">Task Description</label>
+         <textarea class="form-control"
+                     name="description"
+                     rows="3"
+                     placeholder="Write task details"></textarea>
+   </div>
+
+
+   <div class="row">
+
+
+         <!-- Date -->
+         <div class="col-md-6 mb-3">
+            <label class="form-label">Select Date</label>
+            <input type="date"
+                     class="form-control"
+                     name="task_date"
+                     required>
+         </div>
+<!-- Category -->
+<div class="col-md-6 mb-3">
+   <label class="form-label">Category</label>
+   <select class="form-select" name="category">
+         <option value="">Select Category</option>
+         <option>Study</option>
+         <option>Personal</option>
+         <option>Work</option>
+         <option>Health</option>
+         <option>Other</option>
+   </select>
+</div>
+
+
+<!-- Start Time -->
+<div class="col-md-6 mb-3">
+   <label class="form-label">Start Time</label>
+   <input type="time"
+           class="form-control"
+           name="start_time">
+</div>
+
+
+<!-- End Time -->
+<div class="col-md-6 mb-3">
+   <label class="form-label">End Time</label>
+   <input type="time"
+           class="form-control"
+           name="end_time">
+</div>
+
+
+<!-- Priority -->
+<div class="col-md-6 mb-3">
+   <label class="form-label">Priority</label>
+   <select class="form-select" name="priority">
+         <option>Low</option>
+         <option>Medium</option>
+         <option>High</option>
+   </select>
+</div>
+
+
+<!-- Status -->
+<div class="col-md-6 mb-3">
+   <label class="form-label">Task Status</label>
+                       <select class="form-select" name="status">
+                             <option>Pending</option>
+                             <option>In Progress</option>
+                             <option>Completed</option>
+                       </select>
+                    </div>
+
+
+             </div>
+
+
+             <!-- Buttons -->
+             <div class="d-flex gap-2 mt-4">
+
+
+                    <button type="submit" class="submit-btn">
+                       + Add Task
+                    </button>
+
+
+                    <a href="index.html"
+                       class="btn btn-outline-secondary cancel-btn">
+                       Cancel
+                    </a>
+
+
+             </div>
+
+
+          </form>
+
+
+    </div>
+
+
+</div>
+
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!DOCTYPE html>
+<html>
+<head>
+
+
+    <title>My Habit Tracker</title>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-
+scale=1">
+    <!-- Bootstrap 5.3.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/
+bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Internal CSS -->
+    <style>
+
+
+          body {
+              background-color: #f2f2f2;
+          }
+
+
+          h1, h2 {
+              color: #333333;
+          }
+
+
+          .card {
+              margin-bottom: 20px;
+          }
+
+
+          .mybox {
+              background-color: #e5e5e5;
+              padding: 15px;
+              margin-bottom: 15px;
+              border-radius: 8px;
+          }
+
+
+          .progress {
+              height: 15px;
+          }
+
+
+          footer {
+              text-align: center;
+              padding: 20px;
+              color: gray;
+          }
+
+
+    </style>
+
+
+</head>
+
+
+<body>
+     <div class="container mt-4">
+
+
+         <!-- WELCOME SECTION -->
+
+
+         <div class="text-center mb-4">
+
+
+             <h1>Welcome to the Habit Tracker</h1>
+
+
+             <p>Make your daily routine better and achieve your goals.</
+p>
+
+
+         </div>
+
+
+
+         <!-- DAILY HABITS -->
+
+
+         <div id="habits">
+
+
+             <h2>Daily Habits</h2>
+
+
+             <div class="row">
+
+
+                  <div class="col-md-8">
+
+
+                     <div class="card">
+
+
+                         <div class="card-body">
+
+
+                             <h4>My Today's Habits</h4>
+
+
+                             <p>Complete your daily activities.</p>
+
+
+                             <div class="form-check mb-3">
+
+
+                                    <input class="form-check-input"
+type="checkbox">
+
+
+                                    <label class="form-check-label">
+                                        Drink enough water
+                                    </label>
+
+
+                             </div>
+                      <div class="form-check mb-3">
+
+
+                            <input class="form-check-input"
+type="checkbox">
+
+
+                            <label class="form-check-label">
+                                Read a book
+                            </label>
+
+
+                      </div>
+
+
+                      <div class="form-check mb-3">
+
+
+                            <input class="form-check-input"
+type="checkbox">
+
+
+                            <label class="form-check-label">
+                                Study for two hours
+                            </label>
+
+
+                      </div>
+
+
+                      <div class="form-check mb-3">
+
+
+                            <input class="form-check-input"
+type="checkbox">
+
+
+                            <label class="form-check-label">
+                                Plan for tomorrow
+                            </label>
+
+
+                      </div>
+
+
+                      <input type="text"
+                      class="form-control mb-3"
+                      placeholder="Enter a new habit">
+
+
+                      <button class="btn btn-dark">
+                            Add Habit
+                      </button>
+
+
+                   </div>
+         </div>
+
+
+    </div>
+
+
+
+    <div class="col-md-4">
+
+
+         <div class="mybox">
+
+
+             <h5>Stay Happy</h5>
+
+
+             <p>Always stay positive and work hard.</p>
+
+
+         </div>
+
+
+         <div class="mybox">
+
+
+             <h5>Stay Focused</h5>
+
+
+             <p>Complete your work on time.</p>
+
+
+         </div>
+
+
+         <div class="mybox">
+
+
+             <h5>Take Rest</h5>
+
+
+             <p>Give yourself some time to relax.</p>
+
+
+         </div>
+
+
+    </div>
+
+
+</div>
+
+
+
+<!-- DAILY PROGRESS -->
+
+
+<div class="card">
+
+
+    <div class="card-body">
+
+
+         <h4>Daily Progress</h4>
+            <p>Completed: 0 / 4</p>
+
+
+            <div class="progress">
+
+
+                  <div class="progress-bar bg-secondary"
+                  style="width: 0%">
+
+
+                  </div>
+
+
+            </div>
+
+
+            <p class="mt-2">Completion: 0%</p>
+
+
+         </div>
+
+
+   </div>
+
+
+</div>
+
+
+
+<!-- GOALS AND PROGRESS -->
+
+
+<div id="goals" class="mt-5">
+
+
+   <h2>Goals and Progress</h2>
+
+
+   <p>Check your goals and work towards achieving them.</p>
+
+
+   <div class="row">
+
+
+         <div class="col-md-8">
+
+
+            <div class="card">
+
+
+                  <div class="card-body">
+
+
+                      <h4>My Goals</h4>
+
+
+                      <h6>Improve My Skills</h6>
+
+
+                      <div class="progress mb-3">
+                  <div class="progress-bar bg-secondary"
+                  style="width: 60%">
+
+
+                      60%
+
+
+                  </div>
+
+
+            </div>
+
+
+            <h6>Read More Books</h6>
+
+
+            <div class="progress mb-3">
+
+
+                  <div class="progress-bar bg-secondary"
+                  style="width: 35%">
+
+
+                      35%
+
+
+                  </div>
+
+
+            </div>
+
+
+            <h6>Stay Organised</h6>
+
+
+            <div class="progress mb-3">
+
+
+                  <div class="progress-bar bg-secondary"
+                  style="width: 65%">
+
+
+                      65%
+
+
+                  </div>
+
+
+            </div>
+
+
+         </div>
+
+
+   </div>
+
+
+</div>
+
+
+
+<div class="col-md-4">
+                      <div class="mybox">
+
+
+                            <h5>Set Goals</h5>
+
+
+                            <p>Make small goals every day.</p>
+
+
+                      </div>
+
+
+                      <div class="mybox">
+
+
+                            <h5>Keep Learning</h5>
+
+
+                            <p>Learn something new every day.</p>
+
+
+                      </div>
+
+
+                      <div class="mybox">
+
+
+                            <h5>Believe in Yourself</h5>
+
+
+                            <p>Never give up on your dreams.</p>
+
+
+                      </div>
+
+
+                   </div>
+
+
+             </div>
+
+
+          </div>
+
+
+
+          <!-- FOOTER -->
+
+
+          <footer>
+
+
+             <p>My Habit Tracker</p>
+
+
+          </footer>
+
+
+    </div>
+
+
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LifeOS - My Schedule</title>
+
+
+    <link rel="stylesheet" href="hello.css">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/
+bootstrap.min.css" rel="stylesheet">
+</head>
+
+
+<body>
+<link href="css.html">
+    <nav class="navbar">
+          <a href="index.html">LifeOS</a>
+          <a href="schedulenew.html">My Schedule</a>
+          <a href="finance.html">Finance Tracker</a>
+    </nav>
+
+
+    <div class="main">
+
+
+          <h1>My Schedule</h1>
+          <p>Plan your day and manage your activities.</p>
+
+
+          <div class="box">
+              <h2>Today's Overview</h2>
+
+
+              <p>Total Activities: 6</p>
+              <p>Completed Activities: 2</p>
+              <p>Remaining Activities: 4</p>
+          </div>
+
+
+          <div class="box">
+
+
+              <h2>Daily Timetable</h2>
+
+
+              <table class="table">
+                   <tr>
+                      <th>Time</th>
+                      <th>Activity</th>
+                      <th>Category</th>
+                      <th>Status</th>
+</tr>
+
+
+<tr>
+   <td>8:00 AM</td>
+   <td>Morning Routine</td>
+   <td>Personal</td>
+   <td>Completed</td>
+</tr>
+
+
+<tr>
+   <td>9:00 AM</td>
+   <td>College Lectures</td>
+   <td>Academic</td>
+   <td>Completed</td>
+</tr>
+
+
+<tr>
+   <td>1:00 PM</td>
+   <td>Lunch Break</td>
+   <td>Personal</td>
+   <td>Upcoming</td>
+</tr>
+
+
+<tr>
+   <td>3:00 PM</td>
+   <td>Study Session</td>
+   <td>Academic</td>
+   <td>Upcoming</td>
+</tr>
+
+
+<tr>
+   <td>5:00 PM</td>
+   <td>Hobby Time</td>
+   <td>Personal</td>
+   <td>Upcoming</td>
+</tr>
+
+
+<tr>
+   <td>8:00 PM</td>
+   <td>Revision</td>
+   <td>Academic</td>
+   <td>Upcoming</td>
+</tr>
+             </table>
+
+
+          </div>
+
+
+          <div class="box">
+
+
+             <h2>Upcoming Activities</h2>
+
+
+             <p>3:00 PM - Study Session</p>
+             <p>5:00 PM - Hobby Time</p>
+             <p>8:00 PM - Night Revision</p>
+
+
+          </div>
+
+
+    </div>
+
+
+    <footer>
+          <p>LifeOS - Organize Your Life</p>
+    </footer>
+
+
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LifeOS - Finance Tracker</title>
+
+
+    <link rel="stylesheet" href="hello.css">
+
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/
+bootstrap.min.css" rel="stylesheet">
+</head>
+
+
+<body>
+      <link href="css.html">
+    <nav class="navbar">
+          <a href="index.html">LifeOS</a>
+          <a href="schedulenew.html">My Schedule</a>
+          <a href="finance.html">Finance Tracker</a>
+    </nav>
+
+
+    <div class="main">
+<h1>Finance Tracker</h1>
+<p>Manage your monthly budget and expenses.</p>
+
+
+<div class="box">
+
+
+   <h2>Monthly Overview</h2>
+
+
+   <p>Monthly Budget: Rs. 10,000</p>
+   <p>Total Expenses: Rs. 4,500</p>
+   <p>Remaining Balance: Rs. 5,500</p>
+
+
+</div>
+
+
+<div class="box">
+
+
+   <h2>Expense Categories</h2>
+
+
+   <p>Food: Rs. 2,000</p>
+   <p>Transport: Rs. 1,000</p>
+   <p>Shopping: Rs. 1,500</p>
+
+
+</div>
+
+
+<div class="box">
+
+
+   <h2>Recent Transactions</h2>
+
+
+   <table class="table">
+
+
+         <tr>
+            <th>Date</th>
+            <th>Description</th>
+            <th>Category</th>
+            <th>Amount</th>
+         </tr>
+
+
+         <tr>
+            <td>02 Nov</td>
+            <td>Lunch</td>
+            <td>Food</td>
+            <td>Rs. 200</td>
+         </tr>
+         <tr>
+            <td>04 Nov</td>
+            <td>Bus Pass</td>
+            <td>Transport</td>
+            <td>Rs. 500</td>
+         </tr>
+
+
+         <tr>
+            <td>06 Nov</td>
+            <td>Clothing</td>
+            <td>Shopping</td>
+            <td>Rs. 1000</td>
+         </tr>
+
+
+   </table>
+
+
+</div>
+
+
+<div class="box">
+
+
+   <h2>Add New Expense</h2>
+
+
+   <form>
+
+
+         <p>Expense Name</p>
+         <input type="text" placeholder="Enter expense name">
+
+
+         <p>Amount</p>
+         <input type="number" placeholder="Enter amount">
+
+
+         <p>Category</p>
+
+
+         <select>
+            <option>Select Category</option>
+            <option>Food</option>
+            <option>Transport</option>
+            <option>Shopping</option>
+            <option>Education</option>
+            <option>Other</option>
+         </select>
+
+
+         <br><br>
+                   <button type="button">Add Expense</button>
+
+
+             </form>
+
+
+          </div>
+
+
+    </div>
+
+
+    <footer>
+          <p>LifeOS - Organize Your Life</p>
+    </footer>
+
+
+</body>
+</html>
